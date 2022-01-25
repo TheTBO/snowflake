@@ -1,0 +1,25 @@
+{
+  "name": "snowflake",
+  "version": "1.0.0",
+  "description": "snowflake using sketch RNN from ml5js and p5js",
+  "main": "src/sketch.js",
+  "repository": "git@github.com:TheTBO/snowflake.git",
+  "author": "TheTBO <almujtaba.mhmd@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack build",
+    "serve": "webpack serve",
+    "watch": "webpack watch"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "ml5": "^0.8.16",
+    "p5": "^1.4.0"
+  }
+}

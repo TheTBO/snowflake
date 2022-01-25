@@ -1,10 +1,13 @@
-class SnowFlake {
 
-    constructor(x, y) {
+
+class Snowflake {
+
+    constructor(x, y, p5) {
+        this.p5 = p5;
         this.x = x;
         this.y = y;
         this.strokes = [];
-        this.speed = random(0.005, 0.01);
+        this.speed = Math.random(0.005, 0.01);
     }
 
     addStroke(stroke) {
@@ -12,6 +15,7 @@ class SnowFlake {
     }
 
     show() {
+        const p5 = this.p5;
         let oldX = this.x;
         let oldY = this.y;
         for (let i = 0; i < this.strokes.length; i++) {
@@ -21,9 +25,9 @@ class SnowFlake {
             let newY = oldY + strokePath.dy * 0.1;
 
             if (this.strokes[i].pen == "down") {
-                stroke(255);
-                strokeWeight(2);
-                line(oldX, oldY, newX, newY);
+                p5.stroke(255);
+                p5.strokeWeight(2);
+                p5.line(oldX, oldY, newX, newY);
             }
 
             oldX = newX;
@@ -32,3 +36,6 @@ class SnowFlake {
         }
     }
 }
+
+
+export default Snowflake;
